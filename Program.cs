@@ -41,9 +41,18 @@ namespace Tree
             System.Console.WriteLine("Смотрим окончательный результат.");
             ShowMeNodes(tree.Root, i);
             System.Console.WriteLine();
-            System.Console.WriteLine("| 1 Lvl | 2 Lvl | 3 Lvl | 4 Lvl | 5 Lvl | 6 Lvl | 7 Lvl | 8 Lvl | 9 Lvl |  ");
+          
             // красиво сделать так мне и не удалось :(
-            TreeFunctions.printTree(tree.Root);
+            Console.Write("Выводить визуализацию древа ?  ");
+            Console.Write(" [ Да - 1 / Нет - 2] " );
+            userX = Convert.ToInt32(System.Console.ReadLine());
+            System.Console.WriteLine();
+            if ( userX == 1 )
+                  {
+                    Console.Clear();
+                    System.Console.WriteLine("| 1 Lvl | 2 Lvl | 3 Lvl | 4 Lvl | 5 Lvl | 6 Lvl | 7 Lvl | 8 Lvl | 9 Lvl |  ");
+                    TreeFunctions.printTree(tree.Root);
+                  }
             Console.ReadLine();
 
         }
